@@ -66,15 +66,15 @@ void print_queue(Queue* queue){
     }
 }
 
-// int main(void){
-//     Queue* queue = createQueue();
-//     for (int i=0; i<5; i++){
-//         int* pointer = malloc(sizeof(int));
-//         *pointer = i;
-//         enqueue(queue, pointer);
-//     }
-//     print_queue(queue);
+int main(void){
+    Queue* queue = createQueue();
+    for (int i=0; i<5; i++){
+        int* pointer = malloc(sizeof(int));
+        *pointer = i;
+        enqueue(queue, pointer);
+    }
+    print_queue(queue);
 
 
-//     return EXIT_SUCCESS;
-// }
+    return EXIT_SUCCESS;
+}

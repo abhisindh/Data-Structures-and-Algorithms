@@ -37,13 +37,6 @@ Throughout my learning journey, I have relied on valuable resources to enhance m
 3. [Youtube playlist: CS50 2020](https://www.youtube.com/playlist?list=PLhQjrBD2T382_R182iC2gNZI9HzWFMC_8) 
 4. [Youtube channel: Michael Sambol](https://www.youtube.com/@MichaelSambol)
 5. [Yotube channel: My code school](https://www.youtube.com/@mycodeschool) 
-<!-- 1. [Book: "Introduction to Algorithms" by Thomas H. Cormen et al.](https://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262033844)
-
-1. [Online Course: "Algorithms and Data Structures" by Tim Roughgarden on Coursera](https://www.coursera.org/specializations/algorithms)
-
-
-
-3. [Website: Khan Academy - Algorithms Course](https://www.khanacademy.org/computing/computer-science/algorithms) -->
 
 These resources have been invaluable in providing in-depth explanations, practical examples, and engaging practice problems that have contributed to my growth as a programmer.
 

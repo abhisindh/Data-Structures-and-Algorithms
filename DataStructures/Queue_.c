@@ -36,7 +36,7 @@ int full(Queue* queue){
 }
 
 int empty(Queue* queue){
-    if (queue->end == queue->start) return 1;
+    if (queue->end == -1) return 1;
     return 0;
 }
 void enqueue(Queue* queue, int data){
@@ -52,9 +52,16 @@ void enqueue(Queue* queue, int data){
 }
 
 int dequeue(Queue* queue){
+    int index;
     if (empty(queue)) return -1;
+    if (queue->start == queue->end)
+    {
+        index = queue->start;
+        queue->start = queue->end = -1;
+        return queue->array[index];
+    }
 
-    int index = increment(queue->start);
+    index = increment(queue->start);
     int return_value = queue->array[queue->start];
     queue->start = index;
     return return_value;
@@ -71,32 +78,34 @@ void printQueue(Queue* queue){
     
 }
 
-int main(void){
-    Queue* queue = create_queue();
-    for (int i=0; i<10; i++){
-        enqueue(queue, i);
-    }
-    printQueue(queue);
+// int main(void){
+//     Queue* queue = create_queue();
+//     for (int i=0; i<15; i++){
+//         printf("is empty %d\n", empty(queue));
+//         printf("is full %d\n", full(queue));
+//         enqueue(queue, i);
+//     }
+//     printQueue(queue);
 
-    for (int i=0; i<5; i++){
-        dequeue(queue);
-    }
-    printQueue(queue);
+//     for (int i=0; i<5; i++){
+//         dequeue(queue);
+//     }
+//     printQueue(queue);
     
-    for (int i=0; i<5; i++){
-        enqueue(queue, i);
-    }
-    printQueue(queue);
+//     for (int i=0; i<5; i++){
+//         enqueue(queue, i);
+//     }
+//     printQueue(queue);
 
-    for (int i=0; i<5; i++){
-        dequeue(queue);
-    }
-    printQueue(queue);
+//     for (int i=0; i<5; i++){
+//         dequeue(queue);
+//     }
+//     printQueue(queue);
 
-    for (int i=0; i<6; i++){
-        dequeue(queue);
-    }
-    printQueue(queue);
-    return EXIT_SUCCESS;
-}
+//     for (int i=0; i<6; i++){
+//         dequeue(queue);
+//     }
+//     printQueue(queue);
+//     return EXIT_SUCCESS;
+// }
 
